@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>
+        {% block title %}{% endblock %}
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css')}}">
+  
+        {% block head %}{% endblock %}
+
+    </head>
+
+    <body>
+
+
+    <div>
+        Gateway Maintenance
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Employees</button>
+        <div class="dropdown-content">
+          <div class="nested-dropdown">
+            <button class="nested-dropbtn">Employee 1</button>
+          </div>
+          <div class="nested-dropdown">
+            <button class="nested-dropbtn">Employee 2</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Customers</button>
+        <div class="dropdown-content">
+          <div class="nested-dropdown">
+            <button class="nested-dropbtn">Customer 1</button>
+          </div>
+          <div class="nested-dropdown">
+            <button class="nested-dropbtn">Customer 2</button>
+          </div>
+        </div>
+      </div>
+
+    {% block body %}{% endblock %}
+    {% block after_body %}{% endblock %}
+
+</body>
+
+</html>
